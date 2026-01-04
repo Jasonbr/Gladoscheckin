@@ -7,6 +7,7 @@
 #### 我的邀请码：([1BG9S-I56H7-9R20K-6SFME](https://0a58e-nv28s-6u3qv-33vmg.glados.space)) 
 
 ### **Fork**本仓库
+仓库地址：https://github.com/Jasonbr/Gladoscheckin
 
 ![图片加载失败](imgs/1.png)
 
