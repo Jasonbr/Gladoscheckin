@@ -3,11 +3,12 @@ name: auto check
 on:
   workflow_dispatch:
   push:
-    branches: [ master ]
+    branches: [ main ]
     paths-ignore:
+      - 'README.md'
       - 'imgs/'
   schedule:
-    - cron: '10 16 * * *'
+    - cron: '0 4,10 * * *'
   watch:
     types: started
 
@@ -40,8 +41,9 @@ jobs:
         python checkin.py
       env:
         # env获取
-        SENDKEY: ${{ secrets.SENDKEY }}
-        COOKIES: ${{ secrets.COOKIES }}
+        PUSHDEER_SENDKEY: ${{ secrets.PUSHDEER_SENDKEY }}
+        GLADOS_COOKIES: ${{ secrets.GLADOS_COOKIES }}
+        GLADOS_EXCHANGE_PLAN: ${{ secrets.GLADOS_EXCHANGE_PLAN }}
 
     - name: keep alive
       uses: liskin/gh-workflow-keepalive@v1 # using the workflow with default settings
