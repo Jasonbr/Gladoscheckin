@@ -45,7 +45,6 @@ HEADERS_TEMPLATE = {
     'content-type': 'application/json;charset=UTF-8',
     'accept': 'application/json, text/plain, */*',
     'accept-language': 'zh-CN,zh;q=0.9,en;q=0.8',
-    'accept-encoding': 'gzip, deflate, br',
     'sec-ch-ua': '"Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"',
     'sec-ch-ua-mobile': '?0',
     'sec-ch-ua-platform': '"Windows"',
