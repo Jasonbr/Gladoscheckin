@@ -28,19 +28,19 @@ ENV_PUSH_KEY = "PUSHDEER_SENDKEY"
 ENV_COOKIES = "GLADOS_COOKIES"
 ENV_EXCHANGE_PLAN = "GLADOS_EXCHANGE_PLAN"
 
-# API URLs (GLaDOS 已更换域名为 glados.one)
-CHECKIN_URL = "https://glados.one/api/user/checkin"
-STATUS_URL = "https://glados.one/api/user/status"
-POINTS_URL = "https://glados.one/api/user/points"
-EXCHANGE_URL = "https://glados.one/api/user/exchange"
+# API URLs (GLaDOS 已更换域名为 glados.space)
+CHECKIN_URL = "https://glados.space/api/user/checkin"
+STATUS_URL = "https://glados.space/api/user/status"
+POINTS_URL = "https://glados.space/api/user/points"
+EXCHANGE_URL = "https://glados.space/api/user/exchange"
 
 # POST DATA
 CHECKIN_DATA = {"token": "glados.cloud"} 
 
 # Request Headers
 HEADERS_TEMPLATE = {
-    'referer': 'https://glados.one/console/checkin',
-    'origin': "https://glados.one",
+    'referer': 'https://glados.space/console/checkin',
+    'origin': "https://glados.space",
     'user-agent': "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
     'content-type': 'application/json;charset=UTF-8',
     'accept': 'application/json, text/plain, */*',
