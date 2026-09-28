@@ -34,14 +34,14 @@ STATUS_URL = "https://glados.space/api/user/status"
 POINTS_URL = "https://glados.space/api/user/points"
 EXCHANGE_URL = "https://glados.space/api/user/exchange"
 
-# POST DATA
-CHECKIN_DATA = {"token": "glados.cloud"} 
+# POST DATA - GLaDOS 已更新 token 为 glados.one
+CHECKIN_DATA = {"token": "glados.one"}
 
 # Request Headers
 HEADERS_TEMPLATE = {
     'referer': 'https://glados.space/console/checkin',
     'origin': "https://glados.space",
-    'user-agent': "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    'user-agent': "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
     'content-type': 'application/json;charset=UTF-8',
     'accept': 'application/json, text/plain, */*',
     'accept-language': 'zh-CN,zh;q=0.9,en;q=0.8',
