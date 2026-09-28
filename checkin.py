@@ -47,7 +47,7 @@ HEADERS_TEMPLATE = {
     'accept-language': 'zh-CN,zh;q=0.9,en;q=0.8',
     'sec-ch-ua': '"Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"',
     'sec-ch-ua-mobile': '?0',
-    'sec-ch-ua-platform': '"Windows"',
+    'sec-ch-ua-platform': '"macOS"',
     'sec-fetch-dest': 'empty',
     'sec-fetch-mode': 'cors',
     'sec-fetch-site': 'same-origin'
@@ -162,6 +162,15 @@ def checkin_and_process(cookie: str, exchange_plan: str) -> Tuple[str, str, str,
                 points_gained = "0"
             else:
                 status_msg = f"签到成功: {response_message}"
+        elif response_code == 1:
+            # GLaDOS 新版 API: code 1 表示今天已签到（重复签到）
+            status_msg = "重复签到，明天再来"
+            points_gained = "0"
+        elif response_code == 4:
+            # device-mismatch: 登录设备与签到请求设备不一致
+            status_msg = f"设备不匹配: {response_message}"
+            logger.error(f"device-mismatch, 响应: {checkin_data}")
+            points_gained = "0"
         elif response_code == -2:
             status_msg = f"登录已过期，请更新 Cookie"
             logger.error(f"Cookie 已过期，响应: {checkin_data}")
