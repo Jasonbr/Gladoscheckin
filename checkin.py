@@ -37,6 +37,11 @@ EXCHANGE_URL = "https://glados.space/api/user/exchange"
 # POST DATA - GLaDOS 已更新 token 为 glados.one
 CHECKIN_DATA = {"token": "glados.one"}
 
+# Cookie 格式说明 (2026-11-19 改版后)
+# 旧格式：koa:sess=...; koa:sess.sig=...
+# 新格式：gld:sess=...; gld:sess.sig=...
+# 脚本自动兼容两种格式
+
 # Request Headers
 HEADERS_TEMPLATE = {
     'referer': 'https://glados.space/console/checkin',
